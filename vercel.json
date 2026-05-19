@@ -1,0 +1,14 @@
+{
+  "functions": {
+    "api/**/*.php": {
+      "runtime": "vercel-php@0.7.0"
+    }
+  },
+  "routes": [
+    { "src": "/assets/(.*)", "dest": "/api/assets/$1" },
+    { "src": "/admin/(.*)", "dest": "/api/admin/$1" },
+    { "src": "/(login|register|logout|products|cart|checkout|product_detail|add_to_cart|remove_from_cart|generate_hash|fix_admin|verify_test).php", "dest": "/api/$1.php" },
+    { "src": "/", "dest": "/api/index.php" },
+    { "src": "/(.*)", "dest": "/api/index.php" }
+  ]
+}

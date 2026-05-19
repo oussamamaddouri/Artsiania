@@ -1,0 +1,1081 @@
+/* Import Fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap');
+
+/* 
+font-family: 'Playfair Display', serif;  <- For elegant headings
+font-family: 'Poppins', sans-serif;       <- For body text and navigation
+*/
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+}
+
+/* --- Navigation Bar Styling --- */
+.navbar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.nav-link {
+    color: #333;
+    font-weight: 500;
+    margin-right: 1.5rem;
+}
+
+.contact-btn {
+    border: 2px solid #333;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+
+/* --- Hero Section Styling --- */
+.hero-section {
+    padding: 8rem 0; /* Lots of vertical padding */
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 7rem; /* Large font size for the main title */
+    font-weight: 700;
+    line-height: 1;
+}
+
+.hero-text {
+    font-size: 1.1rem;
+    color: #555;
+    padding-top: 1.5rem; /* Align text with top of the title */
+}
+
+/* --- Background Image Container --- */
+.hero-image-container {
+    width: 100%;
+    height: 60vh;
+
+    border-radius: 30px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image-container img {
+    width: 85%;          /* zoom OUT */
+    height: auto;
+
+    border-radius: 30px; /* REAL rounded image */
+    object-fit: contain;
+}
+/* --- New Sections Styling --- */
+
+/* General styling for new content sections */
+.content-section {
+    padding: 100px 0;
+}
+
+/* For the small (01) text above the title */
+.section-supertitle {
+    font-size: 1rem;
+    color: #6c757d; /* Bootstrap's secondary color */
+    margin-bottom: 0;
+    position: relative;
+    display: inline-block; /* Required for pseudo-element positioning */
+    z-index: 2; /* Ensure it's above the pink square */
+}
+
+/* The faint pink square behind the supertitle */
+.section-supertitle::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #F8EFEA;
+    position: absolute;
+    top: -10px;
+    left: -15px;
+    z-index: -1;
+}
+
+/* For main titles like "Try Pottery" */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+
+.section-title em {
+    font-style: italic;
+}
+
+
+/* --- Image Collage Specific Styling ("Try Pottery") --- */
+.image-collage {
+    position: relative;
+    height: 450px; /* Define a height for the container to position items within */
+}
+
+.image-wrapper {
+    position: absolute;
+}
+
+.image-1 {
+    width: 70%;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.image-2 {
+    width: 45%;
+    bottom: 0;
+    left: 10%;
+    z-index: 3;
+}
+
+.black-square {
+    position: absolute;
+    background-color: #111;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+}
+.square-1 { top: 35%; left: 45%; }
+.square-2 { top: 50%; left: 35%; }
+
+
+/* --- "About Us" Specific Styling --- */
+.about-us-images {
+    min-height: 500px; /* Ensures the background title is visible even on small screens */
+}
+
+.background-title {
+    position: absolute;
+    font-family: 'Playfair Display', serif;
+    font-size: 9rem;
+    font-weight: 700;
+    color: #EAEAEA;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the text perfectly */
+    z-index: 1; /* Puts the text behind the images */
+    white-space: nowrap; /* Prevents the text from wrapping */
+}
+.about-us-images img {
+    position: relative;
+    z-index: 2; /* Puts the images in front of the background text */
+}
+
+
+/* Custom Button Styling */
+.btn-custom {
+    background-color: #606C5D; /* A muted green color */
+    color: #fff;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #515c4e;
+    color: #fff;
+}
+
+
+/* --- REVISED Products Section Styling (Replace the old product styles with this) --- */
+/* --- REVISED Products Section Styling (Replace the old product styles with this) --- */
+
+.products-section {
+    background-color: #F8EFEA;
+    padding: 100px 0;
+}
+
+.product-item {
+    text-align: center;
+}
+
+.product-image-wrapper {
+    height: 250px; /* Keep this height for a consistent layout */
+    width: 100%;
+    overflow: hidden; 
+    border-radius: 4px;
+    /* We ensure there's no background color here so it's transparent */
+}
+
+.product-image-wrapper img {
+    height: 100%;
+    width: 100%;
+    
+    /* THE FIX IS HERE: Changed from 'cover' to 'contain' */
+    object-fit: contain;
+
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-item a:hover .product-image-wrapper img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 0.95rem;
+    padding-top: 1rem;
+}
+
+.product-name {
+    text-align: left;
+    font-weight: 500;
+}
+
+.product-price {
+    text-align: right;
+    white-space: nowrap; 
+    font-weight: 400;
+}
+
+.product-price s {
+    color: #999;
+    font-weight: 400;
+    margin-right: 0.5rem;
+}
+
+.product-price strong {
+    font-weight: bold;
+    color: #000;
+}
+
+
+
+/* --- Site Footer Styling --- */
+
+.site-footer {
+    background-color: #111111; /* A very dark grey is often softer than pure black */
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.text-secondary-light {
+    color: #a0a0a0; /* A light grey for description text */
+}
+
+.footer-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #888888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.footer-heading-large {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: #dddddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+
+/* --- Newsletter Form Styling --- */
+.newsletter-form .input-group {
+    position: relative;
+}
+
+.newsletter-form .form-control {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #555555;
+    border-radius: 0;
+    padding-left: 0;
+    color: #ffffff;
+    padding: 0.75rem 0;
+}
+
+.newsletter-form .form-control:focus {
+    background: transparent;
+    box-shadow: none;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.newsletter-form .form-control::placeholder {
+    color: #888888;
+}
+
+.newsletter-form .btn-submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0 0.5rem;
+}
+
+/* --- Bottom Bar Styling --- */
+.footer-hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-right: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #cccccc;
+}
+
+.copyright {
+    color: #888888;
+    font-size: 0.85rem;
+}
+/* --- Product Detail Page Styling --- */
+.product-detail-page .font-playfair {
+    font-family: 'Playfair Display', serif;
+}
+
+.product-detail-page .btn-dark {
+    background-color: #606C5D; /* Use the same green as before */
+    border-color: #606C5D;
+}
+.product-detail-page .btn-dark:hover {
+    background-color: #515c4e;
+    border-color: #515c4e;
+}
+
+/* --- Suggested Products Styling --- */
+.suggested-product-item .product-image-wrapper {
+    height: 300px;
+    width: 100%;
+    overflow: hidden; 
+}
+.suggested-product-item .product-image-wrapper img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain; /* changed from cover to match new image style */
+    transition: transform 0.3s ease-in-out;
+}
+.suggested-product-item a:hover .product-image-wrapper img {
+    transform: scale(1.05);
+}
+.suggested-product-item .product-info {
+    padding-top: 0.5rem;
+}
+
+
+
+/* ============================================== */
+/* === GLOBAL THEME COLOR OVERRIDES === */
+/* ============================================== */
+
+/* --- Primary Buttons --- */
+/* This changes all 'btn-primary' buttons to our theme's green */
+.btn-primary {
+    background-color: #606C5D;
+    border-color: #606C5D;
+}
+
+/* Darken the button on hover */
+.btn-primary:hover {
+    background-color: #515c4e;
+    border-color: #515c4e;
+}
+
+/* Style for the focus outline (for accessibility) */
+.btn-primary:focus, .btn-primary:active {
+    background-color: #515c4e;
+    border-color: #515c4e;
+    box-shadow: 0 0 0 0.25rem rgba(96, 108, 93, 0.5);
+}
+
+
+/* --- Links & Active States --- */
+/* This changes the active category in the product filter sidebar */
+.list-group-item-action.active {
+    background-color: #606C5D;
+    border-color: #606C5D;
+}
+
+/* This changes the default blue color of all links to a dark theme color */
+a {
+    color: #333;
+    text-decoration: none;
+}
+a:hover {
+    color: #606C5D; /* Links turn green on hover */
+}
+
+/* Make sure dropdown links also look right */
+.dropdown-item:active {
+    background-color: #606C5D;
+}
+
+/* ============================================== */
+/* === GLOBAL THEME COLOR OVERRIDES (V2) === */
+/* ============================================== */
+
+/* --- Primary Buttons --- */
+/* This targets all 'btn-primary' buttons, like "Add to Cart" */
+.btn-primary {
+    background-color: #606C5D !important; /* Muted Green */
+    border-color: #606C5D !important;
+    color: #fff !important;
+}
+.btn-primary:hover, .btn-primary:active {
+    background-color: #515c4e !important; /* Darker Green */
+    border-color: #515c4e !important;
+}
+.btn-primary:focus {
+    background-color: #515c4e !important;
+    border-color: #515c4e !important;
+    box-shadow: 0 0 0 0.25rem rgba(96, 108, 93, 0.5) !important;
+}
+
+
+/* --- Filter Sidebar --- */
+/* This targets the highlighted category link */
+.list-group-item.active {
+    background-color: #606C5D !important;
+    border-color: #606C5D !important;
+    color: #fff !important;
+}
+
+
+/* --- Links --- */
+/* General link styling to avoid default blue */
+a {
+    color: #212529; /* A standard dark grey for text */
+    text-decoration: none;
+}
+a:hover {
+    color: #606C5D; /* Links turn green on hover */
+}
+
+/* --- Ensure link in card titles looks right --- */
+.card-title a {
+    color: inherit;
+}
+
+/* --- Outline Buttons --- */
+/* This targets 'btn-outline-primary' like "Leave a Review" */
+.btn-outline-primary {
+    color: #606C5D !important;          /* Text color is Green */
+    border-color: #606C5D !important;   /* Border color is Green */
+}
+.btn-outline-primary:hover, .btn-outline-primary:active {
+    background-color: #606C5D !important; /* On hover, background becomes Green */
+    color: #fff !important;              /* On hover, text becomes White */
+    border-color: #606C5D !important;
+}
+.btn-outline-primary:focus {
+    box-shadow: 0 0 0 0.25rem rgba(96, 108, 93, 0.5) !important;
+}
+
+.image-wrapper {
+    position: absolute;
+    overflow: hidden;        /* IMPORTANT */
+    border-radius: 25px;     /* THIS makes rounding work */
+}
+
+.collage-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* fills properly */
+    display: block;
+}
+
+
+.about-img-wrapper {
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Typography for the Infographic section */
+.featured-main-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: #4A4A4A;
+}
+
+.featured-subtitle {
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    color: #7D7D7D;
+}
+
+.view-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    color: #8C8C8C;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* Ensure no shadows or click states since they are pictures only */
+.spec-img-wrapper img {
+    max-height: 400px;
+    width: auto;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.05));
+}
+
+/* Styling for the circular Detail feature on the bottom right */
+.circle-detail {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #D1CDC4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.circle-detail img {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Add this to your style.css */
+.spec-img-wrapper img {
+    max-height: 400px;
+    width: auto;
+    /* This makes white areas of an image transparent */
+    mix-blend-mode: multiply; 
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.05));
+}
+
+
+/* Make all specific section images behave smoothly */
+.spec-img-wrapper img, 
+.about-img, 
+.collage-img, 
+.circle-detail img {
+    transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1), filter 0.3s ease;
+    cursor: crosshair; /* Changes cursor to a 'plus' look over images */
+}
+
+/* Hover effect: lift and shadow */
+.spec-img-wrapper img:hover, 
+.about-img:hover {
+    filter: drop-shadow(0 15px 30px rgba(0,0,0,0.15));
+    z-index: 10;
+}
+
+/* Specifically for the circular detail at the bottom */
+.circle-detail {
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.circle-detail:hover {
+    border-color: #606C5D; /* Highlights border in your theme color */
+}
+
+/* Prevent layout jump when AOS triggers */
+[data-aos] {
+    pointer-events: none;
+}
+[data-aos].aos-animate {
+    pointer-events: auto;
+}
+
+/* 1. Hide the parts of the title currently sliding up */
+.title-mask {
+    overflow: hidden;
+    height: auto;
+    display: block;
+}
+
+/* 2. The Hero Title Animation State */
+.hero-title.animate-title {
+    display: inline-block;
+    transform: translateY(110%); /* Start completely below the mask */
+    opacity: 0;
+    filter: blur(10px); /* Add a cinematic blur to start */
+    transition: 
+        transform 1.2s cubic-bezier(0.2, 1, 0.3, 1), 
+        opacity 1s ease-out, 
+        filter 1.2s ease;
+}
+
+/* 3. The Active Class (Triggered on Load) */
+.hero-title.is-visible {
+    transform: translateY(0%); /* Move into place */
+    opacity: 1;
+    filter: blur(0px); /* Become clear */
+}
+
+/* Premium Typography Adjustment */
+.hero-title {
+    font-size: 7rem;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: -2px; /* Closer letters look more high-end */
+}
+
+
+/* --- New Splash Section Styling --- */
+.top-splash-section {
+    width: 100%;
+    margin-top: 80px; /* This ensures it sits BELOW your navigation bar */
+    overflow: hidden;
+    background-color: #F8EFEA; /* Matches the image background */
+}
+
+.splash-img-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* Adjust the Hero section padding slightly so it isn't too far down */
+.hero-section {
+    padding-top: 4rem !important; 
+    padding-bottom: 4rem !important;
+}
+
+/* Make sure your fixed navbar background doesn't hide the top of the image */
+/* 1. Fix the header to the top and make it transparent */
+/* 1. Force header to sit ON TOP of the content at the absolute top */
+header {
+    position: absolute; /* Not fixed, so it scrolls away */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent !important; /* Always transparent */
+    border: none !important;
+}
+
+/* 2. Style the nav links so they are clearly visible on the image */
+.navbar-light .navbar-nav .nav-link {
+    color: #333 !important; /* Standard dark color */
+    font-weight: 500;
+}
+
+/* 3. The Splash section must start at the very top of the browser */
+.top-splash-section {
+    width: 100%;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.splash-img-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 4. Ensure there is no gap at the top of 'main' */
+main {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* 1. Force the Navbar and all its children to align to the vertical center */
+.navbar {
+    display: flex !important;
+    align-items: center !important; /* Centers logo and menu items horizontally together */
+    height: auto;
+}
+
+/* 2. Target the menu container specifically */
+.navbar-collapse {
+    align-items: center !important; /* Centers the centered links and right buttons */
+}
+
+/* 3. Adjust the Nav Links to remove any default Bootstrap padding that causes offsets */
+.navbar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    height: 100%; /* Makes sure the text is centered relative to the header height */
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* 4. Reset the right-side button alignment (Cart/Login/Register) */
+.navbar-nav.ms-auto {
+    display: flex;
+    align-items: center;
+}
+
+/* 5. Fix the Register button specifically so it doesn't jump */
+.contact-btn {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    display: flex;
+    align-items: center;
+}
+
+/* 1. Push the menu items to the top relative to the logo */
+.navbar-collapse {
+    align-items: flex-start !important; /* Forces items to align with the top of the container */
+    padding-top: 25px; /* Adjust this number to move them exactly where you want them */
+}
+
+/* 2. Remove previous centering logic that was keeping them low */
+.navbar {
+    align-items: flex-start !important; /* Logo and menu now align by their top edge */
+}
+
+/* 3. Keep the logo's position stable */
+.navbar-brand {
+    padding-top: 0 !important;
+}
+
+/* 4. If the text links feel too 'high' now, use this to fine-tune the center/right buttons separately */
+.navbar-nav {
+    margin-top: 10px; /* Small nudge to align with the thick part of your logo font */
+}
+
+/* 5. Register Button specific lift */
+.contact-btn {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    transform: translateY(-2px); /* Tiny lift for the visual border */
+}
+
+
+
+/* 1. Main Background and Container padding */
+.dark-content-section {
+    background-color: #4A3B2A; /* Your dark earth brown */
+    color: #FFFFFF;
+    overflow: hidden;
+}
+
+/* 2. Text adjustments inside the dark section */
+.dark-content-section .section-title {
+    color: #F8EFEA !important; /* Soft cream/beige title */
+}
+
+.dark-content-section .text-white-50 {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* 3. Handle the supertitles (01) and (02) */
+.section-supertitle.dark-theme {
+    color: #FFFFFF;
+}
+
+/* Adjust the small decorative square to be white on dark */
+.section-supertitle.dark-theme::before {
+    background-color: rgba(255, 255, 255, 0.1); /* Very faint white square */
+}
+
+/* 4. Large "About Us" background title color change */
+.background-title.dark-text {
+    color: rgba(0,0,0,0.15); /* Becomes a dark shadow instead of grey */
+}
+
+/* 5. Replace black decorative squares with white ones */
+.white-square {
+    position: absolute;
+    background-color: #FFFFFF;
+    opacity: 0.1;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+}
+
+/* 6. Buttons: Use light outlines to look premium on dark backgrounds */
+.btn-outline-light {
+    border: 2px solid #F8EFEA;
+    color: #F8EFEA;
+    padding: 12px 35px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.btn-outline-light:hover {
+    background-color: #F8EFEA;
+    color: #4A3B2A;
+}
+
+
+/* Styling for your new White Transition Section */
+.new-white-section {
+    background-color: #FFFFFF;
+    position: relative;
+    z-index: 5;
+}
+
+.new-white-section .section-title {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+    color: #111;
+}
+
+/* Add a very subtle gradient at the bottom so it flows smoothly into the dark section */
+.new-white-section::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.02));
+    pointer-events: none;
+}
+
+
+/* Styling for the dark wrapper used above */
+.dark-content-section {
+    position: relative;
+    z-index: 10;
+}
+
+/* Ensure the hero-title doesn't get squished and keeps its big 7rem size */
+.dark-content-section .hero-title {
+    font-size: 7rem;
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: -2px;
+}
+
+/* Make sure descriptions have a luxury spacing */
+.text-white-50 {
+    font-weight: 400;
+    font-size: 1.05rem;
+    letter-spacing: 0.3px;
+    opacity: 0.8;
+}
+
+/* Adds the same tilt logic to the Hero 'Hand' as the product grid */
+.hero-image-container img {
+    transition: transform 0.6s cubic-bezier(0.1, 0, 0, 1);
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
+}
+
+.hero-image-container:hover img {
+    transform: scale(1.05);
+}
+
+
+/* Ensure the padding-bottom of the white section is exactly right 
+   so it flows into the dark brown without a jagged gap */
+.intro-transitional-section {
+    border-bottom: none;
+    z-index: 5;
+    position: relative;
+}
+
+/* Ensure 'Carthage Caverne' starts at the same visual height as 'The Tradition' */
+.hero-title {
+    margin-top: 0;
+}
+
+/* Adds a nice clean 'shadow overlap' from the white into the brown for depth */
+.intro-transitional-section {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* If the 7rem title feels too tall now, we make it tighter */
+.dark-content-section .hero-title {
+    font-size: 7rem;
+    margin-top: -10px; /* Moves it slightly up to align better with the white section text */
+}
+
+/* Styling for the specific intro bottle */
+.intro-bottle-wrapper {
+    overflow: visible; /* Allows shadows to show outside the container */
+}
+
+.intro-bottle-wrapper img {
+    /* 1. Cinematic drop shadow */
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));
+    
+    /* 2. Transition for the mouse tilt you have in your JS */
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Make it lean toward the mouse slightly on hover */
+.intro-bottle-wrapper:hover img {
+    transform: translateY(-10px) rotate(1deg);
+    filter: drop-shadow(0 30px 60px rgba(0,0,0,0.15));
+}
+
+/* Adjust title responsiveness for smaller screens */
+@media (max-width: 991px) {
+    .section-title {
+        font-size: 3rem !important;
+    }
+}
+
+
+
+/* Centers the column contents vertically */
+.intro-transitional-section .row {
+    display: flex;
+    align-items: center;
+}
+
+/* Adds a nice hover effect only to the bottle without shifting the text layout */
+.intro-bottle-wrapper img {
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.intro-bottle-wrapper:hover img {
+    transform: translateY(-10px) scale(1.02);
+}
+
+
+.reveal-img {
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.12));
+    border-radius: 4px; /* Tiny rounding for a photographic paper look */
+}
+
+.gsap-image-reveal-wrapper {
+    /* Keeps the section clean during transitions */
+    overflow: visible; 
+}
+
+
+/* Center all revealed pictures in the same spot */
+.image-swap-container .reveal-pic {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    transition: filter 0.5s ease;
+}
+
+/* Ensure the fixed header doesn't fight with the Pinning logic */
+.pin-spacer {
+    pointer-events: none !important; /* Fix for clickable items during pinning */
+}
+
+
+/* All swapped items must share the same alignment */
+.stxt {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.spic {
+    /* Shadow makes the floating bottle look 'physical' */
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));
+    transform-origin: bottom center;
+}
+
+/* Fixes a tiny flicker that can happen in Chrome during pinning */
+.intro-transitional-section {
+    will-change: transform;
+}
+
+.hero-image-container {
+    margin-top: -30px !important;
+}
+
+/* --- UPDATED: Making the Hand Image Bigger --- */
+.hero-image-container img {
+    /* Change 85% to 110% or even 120% for a giant effect */
+    width: 115% !important; 
+    
+    height: auto;
+    object-fit: contain;
+    
+    /* This ensures that if the image goes over 100%, it doesn't break the page alignment */
+    max-width: none !important; 
+    
+    /* Keeping your loved UI transitions */
+    filter: drop-shadow(0 20px 50px rgba(0,0,0,0.3));
+    transition: transform 0.8s ease;
+}
+
+/* Ensure the container is big enough to show the larger hand */
+.hero-image-container {
+    height: 70vh; /* Increased from 60vh to give the bigger hand more vertical room */
+    width: 100%;
+    overflow: visible; /* Allows the hand to 'bleed' into other sections if it's very big */
+}
+
+.hero-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Fix for pages being blocked by the large absolute header */
+.container[style*="margin-top: 5rem"] {
+    /* Push the forms down so they start AFTER the 130px logo area */
+    margin-top: 180px !important; 
+    
+    /* Make sure the form is 'on top' of the invisible parts of the header */
+    position: relative;
+    z-index: 2000; 
+}
+
+/* Also ensure form controls (inputs) specifically are clickable */
+input, select, button, a {
+    position: relative;
+    z-index: 2001;
+}
+
+/* Optional: if the "Login" title still looks too high, adjust the section title spacing */
+.section-title {
+    padding-top: 20px;
+}
