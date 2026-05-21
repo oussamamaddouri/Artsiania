@@ -1,6 +1,7 @@
 <?php
 // Include header
-require_once __DIR__ . '/../src/views/templates/header.php';
+require_once __DIR__ . '/src/views/templates/header.php';
+
 
 // --- PRODUCT DATA ARRAY ---
 $products = [
@@ -377,5 +378,5 @@ $products = [
 
 <?php
 // Include footer
-require_once __DIR__ . '/../src/views/templates/footer.php';
+require_once __DIR__ . '/src/views/templates/footer.php';
 ?>

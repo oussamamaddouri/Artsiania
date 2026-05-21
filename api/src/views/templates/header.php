@@ -1,6 +1,7 @@
 <?php
 if (session_status() === PHP_SESSION_NONE) { session_start(); }
-require_once __DIR__ . '/../../../config/config.php';
+// Navigate from api/src/views/templates/ (4 levels up) to reach root config
+require_once dirname(__DIR__, 4) . '/config/config.php';
 
 $cart_item_count = 0;
 if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
