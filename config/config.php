@@ -10,7 +10,7 @@ define('DB_NAME', getenv('DB_NAME') ?: 'artisania_db');
 // Root of the project (one level up from this file)
 define('BASE_PATH', dirname(__DIR__)); 
 
-define('SITE_NAME', 'Artisania');
+define('SITE_NAME', 'Carthage Caverne');
 
 // Handle BASE_URL for both Vercel and local Docker
 if (getenv('VERCEL_URL')) {

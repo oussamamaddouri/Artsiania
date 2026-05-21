@@ -13,7 +13,7 @@
                     <img src="assets/images/logo.png" alt="<?php echo SITE_NAME; ?>" style="height: 250px; filter: brightness(0) invert(1);">
                 </div>
                 <p class="text-secondary-light">
-                    Join us for hands-on workshops, or open studio sessions, and shape something truly unique.
+                    Authentic Tunisian extra virgin olive oil, rooted in generations of Mediterranean heritage.
                 </p>
             </div>
 

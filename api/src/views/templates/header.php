@@ -26,7 +26,7 @@ if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
 <header class="container">
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="index.php">
-            <img src="assets/images/logo.png" alt="Artisania" style="height: 130px;">
+            <img src="assets/images/logo.png" alt="Carthage Caverne" style="height: 130px;">
         </a>
 
         <div class="collapse navbar-collapse" id="navbarNav">
